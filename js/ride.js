@@ -96,6 +96,7 @@ let map;
             L.tileLayer('https://tile.openweathermap.org/map/{layer}/{z}/{x}/{y}.png?appid={apikey}', {
                 maxZoom: 19,
                 opacity: .3,
+                crossOrigin: 'true',
                 layer: 'precipitation_new',
                 apikey: '1722f41feef903a63d213e88e34b0974',
                 attribution: '© OpenWeatherMap'
