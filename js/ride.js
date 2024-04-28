@@ -93,13 +93,7 @@ let map;
                 maxZoom: 19,
                 attribution: '© OpenStreetMap'
             }).addTo(map);
-            L.tileLayer('https://tile.openweathermap.org/map/{layer}/{z}/{x}/{y}.png?appid={apiKey}', {
-                maxZoom: 19,
-                opacity: .3,
-                layer: 'precipitation_new',
-                apiKey: '1722f41feef903a63d213e88e34b0974',
-                attribution: '© OpenWeatherMap'
-            }).addTo(map);
+            L.OWMLayer('1722f41feef903a63d213e88e34b0974').addTo(map);
 
             WildRydes.map.center = {latitude: loc.coords.latitude, longitude: loc.coords.longitude};
             let b = map.getBounds();        //  TODO moved
