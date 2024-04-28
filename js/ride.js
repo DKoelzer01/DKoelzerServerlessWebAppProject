@@ -88,8 +88,8 @@ let map;
         document.getElementById("map").style.zIndex = "10";
 
         function setLocation(loc) {
-            map = L.map('map').setView('precipitation_new',[loc.coords.latitude, loc.coords.longitude], 13, '1722f41feef903a63d213e88e34b0974');
-            L.tileLayer('https://tile.openweathermap.org/map/{layer}/{z}/{x}/{y}.png?appid={API Key}', {
+            map = L.map('map').setView([loc.coords.latitude, loc.coords.longitude], 13);
+            L.tileLayer('https://tile.openweathermap.org/map/precipitation_new/{z}/{x}/{y}.png?appid=1722f41feef903a63d213e88e34b0974', {
                 maxZoom: 19,
                 attribution: '© OpenWeatherMap'
             }).addTo(map);
