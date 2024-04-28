@@ -93,10 +93,9 @@ let map;
                 maxZoom: 19,
                 attribution: '© OpenStreetMap'
             }).addTo(map);
-            L.tileLayer('https://maps.openweathermap.org/maps/2.0/weather/1h/{op}/{z}/{x}/{y}?appid={apikey}', {
+            L.tileLayer('https://tile.openweathermap.org/map/{layer}/{z}/{x}/{y}.png?appid={apikey}', {
                 maxZoom: 19,
                 opacity: .5,
-                op: 'PR0',
                 crossOrigin: 'true',
                 layer: 'precipitation_new',
                 apikey: '1722f41feef903a63d213e88e34b0974',
